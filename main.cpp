@@ -29,13 +29,14 @@ int main() {
 
     complete_graph(G, nn);
 
-    std::cout << "Built Initial Graph G with " << nn << "Vertices!\n\n";
-
+    edge e;
     forall_edges(e, G)                              // Print Initial Graph Edges
     {
         G.print_edge(e);
         std::cout << "\n";
     }
+
+    std::cout << "\nBuilt Initial Graph G with " << nn << " Vertices!\n\n";
 
     return 0;
 }
