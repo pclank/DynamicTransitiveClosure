@@ -20,7 +20,14 @@ struct indexobj                                 // Object Saved in Index Array
 void makeEdge(const graph& G, node s, node t, array<list<node>>& adjacent, array2<indexobj>& index_arr)
 {
     adjacent[s->id()].push(t);                      // Target to Adjacent List of Source
-    index_arr(s->id(), t->id()).edge_target = t;   // edgeTarget Points to Target
+    index_arr(s->id(), t->id()).edge_target = t;    // edgeTarget Points to Target
+}
+
+// Find Target Vertex in Adjacent List of Source & Remove It From Adjacent List - Using Index.edgeTarget
+void removeEdge(const graph& G, node s, node t, array<list<node>>& adjacent, array2<indexobj>& index_arr)
+{
+    adjacent[s->id()].remove(t);                       // Delete Target from Adjacent List of Source
+    index_arr(s->id(), t->id()).edge_target = NULL; // edgeTarget to Null
 }
 
 void insertEdge(edge n_edge)                    // Function to Insert Edge
