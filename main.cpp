@@ -30,7 +30,8 @@ int main() {
     std::cout << "Input Initial Graph Vertex Number: ";
     std::cin >> nn;
 
-    complete_graph(G, nn);
+    // complete_graph(G, nn);
+    random_graph(G, nn, 4);
 
     edge e;
     forall_edges(e, G)                              // Print Initial Graph Edges
@@ -44,7 +45,7 @@ int main() {
     array<list> adjacent(NULL, nn);                 // Array of Adjacent Lists
     array<list> reaches(NULL, nn);                  // Array of Reaches Lists
 
-    array2<indexobj> index(nn, nn);
+    array2<indexobj> index(nn, nn);                 // Index Array
 
     return 0;
 }
