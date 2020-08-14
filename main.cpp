@@ -16,7 +16,7 @@ struct indexobj                                 // Object Saved in Index Array
     unsigned int refcount;
 };
 
-// Target Vertex to Adjacent of Source & Index.edgeTarget Points to Target Vertex
+// Target Vertex to Adjacent of Source & Index.edgeTarget Point to Target Vertex
 void makeEdge(const graph& G, node s, node t, array<list<node>>& adjacent, array2<indexobj>& index_arr)
 {
     adjacent[s->id()].push(t);                      // Target to Adjacent List of Source
@@ -30,11 +30,18 @@ void removeEdge(const graph& G, node s, node t, array<list<node>>& adjacent, arr
     index_arr(s->id(), t->id()).edge_target = NULL; // edgeTarget to Null
 }
 
-// Insert Source Vertex into Reaches List of Target & Index.closureSource Points to This Element
+// Insert Source Vertex into Reaches List of Target & Index.closureSource Point to This Element
 void makeClosure(const graph& G, node s, node t, array<list<node>>& reaches, array2<indexobj>& index_arr)
 {
     reaches[t->id()].push(s);                       // Source to Reaches List of Target
-    index_arr(s->id(), t->id()).closure_source = s;
+    index_arr(s->id(), t->id()).closure_source = s; // closureSource Points to Source
+}
+
+// Find Source Vertex in Reaches List of Target & Remove It From Reaches List - Using Index.closureSource
+void removeClosure(const graph& G, node s, node t, array<list<node>>& reaches, array2<indexobj>& index_arr)
+{
+    reaches[t->id()].remove(s);                     // Delete Source from Reaches List of Target
+    index_arr(s->id(), t->id()).closure_source = NULL;  // closureSource to Null
 }
 
 void insertEdge(edge n_edge)                    // Function to Insert Edge

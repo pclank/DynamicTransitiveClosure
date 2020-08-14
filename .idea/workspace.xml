@@ -27,7 +27,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Second Primitive Function Finalized!">
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Third Primitive Function Finalized!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -95,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597438924397</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Third Primitive Function Finalized!">
+      <created>1597439455087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597439455087</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +126,8 @@
     <MESSAGE value="F" />
     <MESSAGE value="First Primitive Function Finalized!" />
     <MESSAGE value="Second Primitive Function Finalized!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Primitive Function Finalized!" />
+    <MESSAGE value="Third Primitive Function Finalized!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Third Primitive Function Finalized!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
@@ -134,9 +142,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="544" y="110" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597329274875" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597438929989">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597439459049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597438929989" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597439459049" />
   </component>
 </project>
