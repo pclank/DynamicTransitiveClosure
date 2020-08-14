@@ -43,7 +43,19 @@ int main() {
     array<list<node>> adjacent(nn);                 // Array of Adjacent Lists
     array<list<node>> reaches(nn);                  // Array of Reaches Lists
 
-    array2<indexobj> index_arr(nn, nn);                 // Index Array
+    array2<indexobj> index_arr(nn, nn);             // Index Array
+
+    node n1;
+    node n2;
+    forall_nodes(n1, G)                              // Initialize Index Info for Each Row
+    {
+        forall_nodes(n2, G)                             // Initialize Index Info for Each Column
+        {
+            index_arr(n1->id(), n2->id()).edge_target = NULL;
+            index_arr(n1->id(), n2->id()).closure_source = NULL;
+            index_arr(n1->id(), n2->id()).refcount = 0;
+        }
+    }
 
     return 0;
 }
