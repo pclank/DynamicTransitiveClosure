@@ -11,13 +11,16 @@ using namespace leda;
 
 struct indexobj                                 // Object Saved in Index Array
 {
-    node* edge_target;
-    node* closure_source;
+    node* edge_target = NULL;
+    node* closure_source = NULL;
 
-    unsigned int refcount;
+    unsigned int refcount = 0;
 };
 
+void insertEdge(edge n_edge)                    // Function to Insert Edge
+{
 
+}
 
 int main() {
     graph G;                                        // Initial Graph Building Section
@@ -37,6 +40,11 @@ int main() {
     }
 
     std::cout << "\nBuilt Initial Graph G with " << nn << " Vertices!\n\n";
+
+    array<list> adjacent(NULL, nn);                 // Array of Adjacent Lists
+    array<list> reaches(NULL, nn);                  // Array of Reaches Lists
+
+    array2<indexobj> index(nn, nn);
 
     return 0;
 }
