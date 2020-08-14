@@ -10,18 +10,17 @@ using namespace leda;
 
 struct indexobj                                 // Object Saved in Index Array
 {
-    node* edge_target;
-    node* closure_source;
+    node edge_target;
+    node closure_source;
 
     unsigned int refcount;
 };
 
 // Target Vertex to Adjacent of Source & Index.edgeTarget Points to Target Vertex
-void makeEdge(const graph G, node s, node t, array<list<node>>& adjacent, array2<indexobj>& index_arr)
+void makeEdge(const graph& G, node s, node t, array<list<node>>& adjacent, array2<indexobj>& index_arr)
 {
     adjacent[s->id()].push(t);                      // Target to Adjacent List of Source
-    index_arr(s->id(), t->id()).edge_target = &t;   // edgeTarget Points to Target
-    std::cout << *index_arr(s->id(), t->id()).edge_target;
+    index_arr(s->id(), t->id()).edge_target = t;   // edgeTarget Points to Target
 }
 
 void insertEdge(edge n_edge)                    // Function to Insert Edge
@@ -34,7 +33,7 @@ int main() {
 
     int nn;
 
-    std::cout << "Input Initial Graph Vertex Number: ";
+    std::cout << "\n\nInput Initial Graph Vertex Number: ";
     std::cin >> nn;
 
     random_graph(G, nn, 1);
@@ -64,11 +63,14 @@ int main() {
     {
         makeEdge(G, n1, n2, adjacent, index_arr);
         std::cout << "Edge " << n1->id() << " - " << n2->id() << " added!\n";
-    }
 
-    node* tn = index_arr(n1->id(), n2->id()).edge_target;
-    node tnn = *tn;
-    std::cout << tnn->id() << "\n";
+        node tn = index_arr(n1->id(), n2->id()).edge_target;
+        std::cout << tn->id() << "\n";
+    }
+    else
+    {
+        std::cout << "They Be the Same Chief!\n";
+    }
 
     return 0;
 }
