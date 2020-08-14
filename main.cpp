@@ -26,8 +26,15 @@ void makeEdge(const graph& G, node s, node t, array<list<node>>& adjacent, array
 // Find Target Vertex in Adjacent List of Source & Remove It From Adjacent List - Using Index.edgeTarget
 void removeEdge(const graph& G, node s, node t, array<list<node>>& adjacent, array2<indexobj>& index_arr)
 {
-    adjacent[s->id()].remove(t);                       // Delete Target from Adjacent List of Source
+    adjacent[s->id()].remove(t);                    // Delete Target from Adjacent List of Source
     index_arr(s->id(), t->id()).edge_target = NULL; // edgeTarget to Null
+}
+
+// Insert Source Vertex into Reaches List of Target & Index.closureSource Points to This Element
+void makeClosure(const graph& G, node s, node t, array<list<node>>& reaches, array2<indexobj>& index_arr)
+{
+    reaches[t->id()].push(s);                       // Source to Reaches List of Target
+    index_arr(s->id(), t->id()).closure_source = s;
 }
 
 void insertEdge(edge n_edge)                    // Function to Insert Edge
