@@ -1,9 +1,7 @@
 #include "LEDA/graph/graph.h"
-#include "LEDA/graph/ugraph.h"
 #include "LEDA/core/random_source.h"
-#include "LEDA/core/p_queue.h"
+#include "LEDA/core/array2.h"
 #include "LEDA/graph/graph_alg.h"
-#include "LEDA/core/dynamic_trees.h"
 #include "LEDA/graph/graph_misc.h"
 #include "LEDA/system/timer.h"
 
@@ -11,10 +9,10 @@ using namespace leda;
 
 struct indexobj                                 // Object Saved in Index Array
 {
-    node* edge_target = NULL;
-    node* closure_source = NULL;
+    node* edge_target;
+    node* closure_source;
 
-    unsigned int refcount = 0;
+    unsigned int refcount;
 };
 
 void insertEdge(edge n_edge)                    // Function to Insert Edge
@@ -42,10 +40,10 @@ int main() {
 
     std::cout << "\nBuilt Initial Graph G with " << nn << " Vertices!\n\n";
 
-    array<list> adjacent(NULL, nn);                 // Array of Adjacent Lists
-    array<list> reaches(NULL, nn);                  // Array of Reaches Lists
+    array<list<node>> adjacent(nn);                 // Array of Adjacent Lists
+    array<list<node>> reaches(nn);                  // Array of Reaches Lists
 
-    array2<indexobj> index(nn, nn);                 // Index Array
+    array2<indexobj> index_arr(nn, nn);                 // Index Array
 
     return 0;
 }
