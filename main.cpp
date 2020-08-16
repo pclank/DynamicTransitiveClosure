@@ -6,6 +6,8 @@
 #include <LEDA/graph/graph_gen.h>
 #include "LEDA/system/timer.h"
 
+#include <utility>
+
 using namespace leda;
 
 struct indexobj                                 // Object Saved in Index Array
@@ -48,32 +50,49 @@ void removeClosure(const graph& G, node s, node t, array<list<node>>& reaches, a
 void insertEdge(const graph& G, node s, node t, array<list<node>>& reaches, array<list<node>>& adjacent, array2<indexobj>& index_arr)
 {
     // Variable Declaration
-    list<array<node>> worklist;
+    list<std::pair<node, node>> worklist;
     node x, y ,z;
 
     if (index_arr(s->id(), t->id()).refcount == 0)
     {
         makeClosure(G, s, t, reaches, index_arr);
-        worklist.push([s, t]);
+        worklist.push(std::make_pair(s, t));
     }
 
     makeEdge(G, s, t, adjacent, index_arr);
     index_arr(s->id(), t->id()).refcount++;
 
-    node x;
-    for (int i = 0; i < reaches[s->id].length; i++)
+    for (int i = 0; i < reaches[s->id()].length(); i++)
     {
-        x = reaches[s->id][i];
-        if (index_arr(x->id(), t->id()) == 0)
+        x = reaches[s->id()].inf(reaches[s->id()].get_item(i));
+        if (index_arr(x->id(), t->id()).refcount == 0)
         {
-            makeClosure(G, x, t, reaches, index_arr)
-            worklist.push([x, t]);
+            makeClosure(G, x, t, reaches, index_arr);
+            worklist.push(std::make_pair(x, t));
         }
 
         index_arr(x->id(), t->id()).refcount++;
     }
 
+    std::pair<node, node> tmp;
+    while (!worklist.empty())
+    {
+        tmp = worklist.pop();
+        x = tmp.first;
+        y = tmp.second;
 
+        for (int i = 0; i < adjacent[y->id()].length(); i++)
+        {
+            z = adjacent[y->id()].inf(adjacent[y->id()].get_item(i));
+            if (index_arr(x->id(), z->id()).refcount == 0)
+            {
+                makeClosure(G, x, z, reaches, index_arr);
+                worklist.push(std::make_pair(x, z));
+            }
+
+            index_arr(x->id(), z->id()).refcount++;
+        }
+    }
 }
 
 int main() {
