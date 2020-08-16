@@ -27,7 +27,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Third Primitive Function Finalized!">
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Fourth Primitive Function Finalized!&#10;All Primitive Functions Finalized!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -57,13 +57,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,6 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597329131157</updated>
       <workItem from="1597329132404" duration="1435000" />
+      <workItem from="1597608720111" duration="2484000" />
     </task>
     <task id="LOCAL-00001" summary="Mistake Fixed.">
       <created>1597332721889</created>
@@ -102,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597439455087</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fourth Primitive Function Finalized!&#10;All Primitive Functions Finalized!">
+      <created>1597439873029</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597439873029</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +128,8 @@
     <MESSAGE value="First Primitive Function Finalized!" />
     <MESSAGE value="Second Primitive Function Finalized!" />
     <MESSAGE value="Third Primitive Function Finalized!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Third Primitive Function Finalized!" />
+    <MESSAGE value="Fourth Primitive Function Finalized!&#10;All Primitive Functions Finalized!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fourth Primitive Function Finalized!&#10;All Primitive Functions Finalized!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
@@ -142,9 +144,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="544" y="110" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597329274875" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597439459049">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597439880842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597439459049" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597439880842" />
   </component>
 </project>

@@ -44,8 +44,35 @@ void removeClosure(const graph& G, node s, node t, array<list<node>>& reaches, a
     index_arr(s->id(), t->id()).closure_source = NULL;  // closureSource to Null
 }
 
-void insertEdge(edge n_edge)                    // Function to Insert Edge
+// Function to Insert Edge
+void insertEdge(const graph& G, node s, node t, array<list<node>>& reaches, array<list<node>>& adjacent, array2<indexobj>& index_arr)
 {
+    // Variable Declaration
+    list<array<node>> worklist;
+    node x, y ,z;
+
+    if (index_arr(s->id(), t->id()).refcount == 0)
+    {
+        makeClosure(G, s, t, reaches, index_arr);
+        worklist.push([s, t]);
+    }
+
+    makeEdge(G, s, t, adjacent, index_arr);
+    index_arr(s->id(), t->id()).refcount++;
+
+    node x;
+    for (int i = 0; i < reaches[s->id].length; i++)
+    {
+        x = reaches[s->id][i];
+        if (index_arr(x->id(), t->id()) == 0)
+        {
+            makeClosure(G, x, t, reaches, index_arr)
+            worklist.push([x, t]);
+        }
+
+        index_arr(x->id(), t->id()).refcount++;
+    }
+
 
 }
 
