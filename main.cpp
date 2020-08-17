@@ -95,6 +95,55 @@ void insertEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
     }
 }
 
+// Function to Delete Edge
+void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, array<list<node>>& adjacent, array2<indexobj>& index_arr)
+{
+    // Variable Declaration
+    list<std::pair<node, node>> worklist;
+    node x, y ,z;
+
+    removeEdge(G, s, t, adjacent, index_arr);
+    index_arr(s->id(), t->id()).refcount--;
+
+    if (index_arr(s->id(), t->id()).refcount == 0)
+    {
+        removeClosure(G, s, t, reaches, index_arr);
+        worklist.push(std::make_pair(s, t));
+    }
+
+    for (int i = 0; i < reaches[s->id()].length(); i++)
+    {
+        index_arr(x->id(), t->id()).refcount--;
+
+        x = reaches[s->id()].inf(reaches[s->id()].get_item(i));
+        if (index_arr(x->id(), t->id()).refcount == 0)
+        {
+            removeClosure(G, x, t, reaches, index_arr);
+            worklist.push(std::make_pair(x, t));
+        }
+    }
+
+    std::pair<node, node> tmp;
+    while (!worklist.empty())
+    {
+        tmp = worklist.pop();
+        x = tmp.first;
+        y = tmp.second;
+
+        for (int i = 0; i < adjacent[y->id()].length(); i++)
+        {
+            index_arr(x->id(), z->id()).refcount--;
+
+            z = adjacent[y->id()].inf(adjacent[y->id()].get_item(i));
+            if (index_arr(x->id(), z->id()).refcount == 0)
+            {
+                removeClosure(G, x, z, reaches, index_arr);
+                worklist.push(std::make_pair(x, z));
+            }
+        }
+    }
+}
+
 int main() {
     graph G;                                        // Initial Graph Building Section
 
