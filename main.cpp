@@ -183,7 +183,7 @@ int main() {
 
         if (n1 != n2)
         {
-            makeEdge(G, n1, n2, adjacent, index_arr);
+            insertEdge(G, n1, n2, reaches, adjacent, index_arr);
             std::cout << "\n\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
 
             node tn = index_arr(n1->id(), n2->id()).edge_target;
