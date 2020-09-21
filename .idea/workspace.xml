@@ -27,10 +27,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Finalized InsertEdge Algorithm Implementation.">
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Testing Branch Created.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
+    <list id="32d32187-d3e3-43da-b240-8cb4d3d73a88" name="Finalized InsertEdge Algorithm Implementation." comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +41,11 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1g32oavhw11Wt21AX3aQRLfXkfX" />
@@ -61,6 +67,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="" />
+      <changelist id="32d32187-d3e3-43da-b240-8cb4d3d73a88" name="Finalized InsertEdge Algorithm Implementation." comment="" />
       <created>1597329131157</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -69,7 +76,7 @@
       <workItem from="1597608720111" duration="4624000" />
       <workItem from="1597684278840" duration="513000" />
       <workItem from="1600695911863" duration="189000" />
-      <workItem from="1600696811426" duration="3126000" />
+      <workItem from="1600696811426" duration="4072000" />
     </task>
     <task id="LOCAL-00001" summary="Mistake Fixed.">
       <created>1597332721889</created>
@@ -120,7 +127,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597613330478</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finalized InsertEdge Algorithm Implementation.">
+      <created>1600702584887</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600702584887</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Testing Branch Created.">
+      <created>1600702651828</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1600702651828</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +169,8 @@
     <MESSAGE value="Fourth Primitive Function Finalized!&#10;All Primitive Functions Finalized!" />
     <MESSAGE value="Start of InsertEdge Algorithm Implementation." />
     <MESSAGE value="Finalized InsertEdge Algorithm Implementation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalized InsertEdge Algorithm Implementation." />
+    <MESSAGE value="Testing Branch Created." />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing Branch Created." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
@@ -163,10 +185,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="544" y="110" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597329274875" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597613335528">
+    <state x="807" y="433" key="VCS.ChangelistChooser" timestamp="1600702626009">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597613335528" />
+    <state x="807" y="433" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600702626009" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600702663964">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600702663964" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597684312580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

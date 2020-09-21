@@ -202,5 +202,15 @@ int main() {
         std::cout << "\n";
     }
 
+    forall_nodes(n1, G)                                 // RefCount for All Rows
+    {
+        forall_nodes(n2, G)                                 // RefCount for All Columns
+        {
+            std::cout << index_arr(n1->id(), n2->id()).refcount;
+        }
+
+        std::cout << "\n";
+    }
+
     return 0;
 }
