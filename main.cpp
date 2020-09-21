@@ -51,6 +51,7 @@ void removeClosure(const graph& G, node s, node t, array<list<node>>& reaches, a
 void insertEdge(const graph& G, node s, node t, array<list<node>>& reaches, array<list<node>>& adjacent, array2<indexobj>& index_arr)
 {
     // Variable Declaration
+
     list<std::pair<node, node>> worklist;
     node x, y ,z;
 
@@ -100,6 +101,7 @@ void insertEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
 void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, array<list<node>>& adjacent, array2<indexobj>& index_arr)
 {
     // Variable Declaration
+
     list<std::pair<node, node>> worklist;
     node x, y ,z;
 
@@ -147,9 +149,11 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
 
 int main()
 {
-    system("clear");
+    system("clear");                      // Clean Console
 
-    graph G;                                        // Initial Graph Building Section
+    // Initial Graph Building Section
+
+    graph G;
 
     int nn;
 
@@ -199,16 +203,19 @@ int main()
         }
     }
 
-    std::cout << "\n";
+    // Print all Edges
+
+    std::cout << "\nPrinting All Edges: \n";
 
     edge e;
-    forall_edges(e, G)                                  // Print all Edges
+    forall_edges(e, G)
     {
         G.print_edge(e);
         std::cout << "\n";
     }
 
     // Printing RefCount Matrix for Testing
+
     std::cout << "\nPrinting RefCount Matrix:\n";
     for(int i = 0; i < nn; i++)                    // RefCount for All Rows
     {
