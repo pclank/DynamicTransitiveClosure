@@ -27,7 +27,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Fixed &quot;Wrong Function Being Used for Inserting Edge&quot;.">
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Minor Improvement in Matrix Printing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -43,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Testing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,7 +76,7 @@
       <workItem from="1597608720111" duration="4624000" />
       <workItem from="1597684278840" duration="513000" />
       <workItem from="1600695911863" duration="189000" />
-      <workItem from="1600696811426" duration="4867000" />
+      <workItem from="1600696811426" duration="5720000" />
     </task>
     <task id="LOCAL-00001" summary="Mistake Fixed.">
       <created>1597332721889</created>
@@ -155,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600703933648</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Minor Improvement in Matrix Printing.">
+      <created>1600704339865</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1600704339865</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +193,8 @@
     <MESSAGE value="Testing Branch Created." />
     <MESSAGE value="Added Printing of RefCount Matrix." />
     <MESSAGE value="Fixed &quot;Wrong Function Being Used for Inserting Edge&quot;." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed &quot;Wrong Function Being Used for Inserting Edge&quot;." />
+    <MESSAGE value="Minor Improvement in Matrix Printing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Improvement in Matrix Printing." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
@@ -205,10 +213,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="807" y="433" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600702626009" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600703938423">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600704347449">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600703938423" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600704347449" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597684312580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

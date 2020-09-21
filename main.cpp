@@ -7,6 +7,7 @@
 #include "LEDA/system/timer.h"
 
 #include <utility>
+#include <stdlib.h>
 
 using namespace leda;
 
@@ -144,7 +145,10 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
     }
 }
 
-int main() {
+int main()
+{
+    system("clear");
+
     graph G;                                        // Initial Graph Building Section
 
     int nn;
@@ -195,6 +199,8 @@ int main() {
         }
     }
 
+    std::cout << "\n";
+
     edge e;
     forall_edges(e, G)                                  // Print all Edges
     {
@@ -202,12 +208,13 @@ int main() {
         std::cout << "\n";
     }
 
-    forall_nodes(n1, G)                                 // RefCount for All Rows
+    // Printing RefCount Matrix for Testing
+    std::cout << "\nPrinting RefCount Matrix:\n";
+    for(int i = 0; i < nn; i++)                    // RefCount for All Rows
     {
-        std::cout << n1->id() << ": ";
-        forall_nodes(n2, G)                                 // RefCount for All Columns
+        for(int j = 0; j < nn; j++)                    // RefCount for All Columns
         {
-            std::cout << index_arr(n1->id(), n2->id()).refcount;
+            std::cout << index_arr(i, j).refcount;
         }
 
         std::cout << "\n";
