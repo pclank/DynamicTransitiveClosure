@@ -173,19 +173,33 @@ int main() {
         }
     }
 
-    G.new_edge(n1 = G.first_node(), n2 = G.choose_node());
+    int num_of_edges =1;
+    std::cout << "How many Edges to Add? (DEFAULT = 1) ";
+    std::cin >> num_of_edges;
 
-    if (n1 != n2)
+    for (int i = 0; i < num_of_edges; i++)          // Add Select Number of Edges
     {
-        makeEdge(G, n1, n2, adjacent, index_arr);
-        std::cout << "Edge " << n1->id() << " - " << n2->id() << " added!\n";
+        G.new_edge(n1 = G.choose_node(), n2 = G.choose_node());     // Random Source and Target Vertices
 
-        node tn = index_arr(n1->id(), n2->id()).edge_target;
-        std::cout << tn->id() << "\n";
+        if (n1 != n2)
+        {
+            makeEdge(G, n1, n2, adjacent, index_arr);
+            std::cout << "\n\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
+
+            node tn = index_arr(n1->id(), n2->id()).edge_target;
+            std::cout << tn->id() << "\n";
+        }
+        else
+        {
+            std::cout << "\nThey Be the Same Chief!\n";
+        }
     }
-    else
+
+    edge e;
+    forall_edges(e, G)                                  // Print all Edges
     {
-        std::cout << "They Be the Same Chief!\n";
+        G.print_edge(e);
+        std::cout << "\n";
     }
 
     return 0;
