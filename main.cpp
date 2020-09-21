@@ -204,6 +204,7 @@ int main() {
 
     forall_nodes(n1, G)                                 // RefCount for All Rows
     {
+        std::cout << n1->id() << ": ";
         forall_nodes(n2, G)                                 // RefCount for All Columns
         {
             std::cout << index_arr(n1->id(), n2->id()).refcount;
