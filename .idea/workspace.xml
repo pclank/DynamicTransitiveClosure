@@ -27,7 +27,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Minor Fix in Operation Sequence.">
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Major Issue Fixed. No longer have out of bounds error.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -85,7 +85,7 @@
       <workItem from="1597684278840" duration="513000" />
       <workItem from="1600695911863" duration="189000" />
       <workItem from="1600696811426" duration="7266000" />
-      <workItem from="1600783296297" duration="2944000" />
+      <workItem from="1600783296297" duration="4435000" />
     </task>
     <task id="LOCAL-00001" summary="Mistake Fixed.">
       <created>1597332721889</created>
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600785495852</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Major Issue Fixed. No longer have out of bounds error.">
+      <created>1600786300024</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1600786300024</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +250,8 @@
     <MESSAGE value="Added Edge Deletion Section in Driver Code." />
     <MESSAGE value="Small Fix in Printing of Edge to be Deleted." />
     <MESSAGE value="Minor Fix in Operation Sequence." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor Fix in Operation Sequence." />
+    <MESSAGE value="Major Issue Fixed. No longer have out of bounds error." />
+    <option name="LAST_COMMIT_MESSAGE" value="Major Issue Fixed. No longer have out of bounds error." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
@@ -266,10 +274,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="807" y="433" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600702626009" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600785517406">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600786304620">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600785517406" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600786304620" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597684312580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

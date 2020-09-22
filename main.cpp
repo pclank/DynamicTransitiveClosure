@@ -112,6 +112,8 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
     removeEdge(G, s, t, adjacent, index_arr);
     index_arr(s->id(), t->id()).refcount--;
 
+    std::cout << "\n1 - RefCount = " << index_arr(s->id(), t->id()).refcount;
+
     if (index_arr(s->id(), t->id()).refcount == 0)
     {
         removeClosure(G, s, t, reaches, index_arr);
@@ -128,6 +130,8 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
             removeClosure(G, x, t, reaches, index_arr);
             worklist.push(std::make_pair(x, t));
         }
+
+        std::cout << "\n2 -RefCount = " << index_arr(s->id(), t->id()).refcount;
     }
 
     std::pair<node, node> tmp;
@@ -147,6 +151,8 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
                 removeClosure(G, x, z, reaches, index_arr);
                 worklist.push(std::make_pair(x, z));
             }
+
+            std::cout << "\n3 - RefCount = " << index_arr(s->id(), t->id()).refcount;
         }
     }
 }
@@ -195,18 +201,12 @@ int main()
     {
         G.new_edge(n1 = G.choose_node(), n2 = G.choose_node());     // Random Source and Target Vertices
 
-        if (n1 != n2)
-        {
-            insertEdge(G, n1, n2, reaches, adjacent, index_arr);
-            std::cout << "\n\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
 
-            node tn = index_arr(n1->id(), n2->id()).edge_target;
-            std::cout << tn->id() << "\n";
-        }
-        else
-        {
-            std::cout << "\nThey Be the Same Chief!\n";
-        }
+        insertEdge(G, n1, n2, reaches, adjacent, index_arr);
+        std::cout << "\n\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
+
+        node tn = index_arr(n1->id(), n2->id()).edge_target;
+        std::cout << tn->id() << "\n";
     }
 
     // Print all Edges
@@ -220,7 +220,7 @@ int main()
         std::cout << "\n";
     }
 
-    // Printing RefCount Matrix for Testing
+    // Printing RefCount Matrix for Testing after Insertion
 
     std::cout << "\nPrinting RefCount Matrix:\n";
     for(int i = 0; i < nn; i++)                    // RefCount for All Rows
@@ -244,6 +244,19 @@ int main()
 
         deleteEdge(G, G.source(e), G.target(e), reaches, adjacent, index_arr);  // Update DTC
         G.del_edge(e);                                  // Delete Edge from G
+    }
+
+    // Printing RefCount Matrix for Testing after Deletion
+
+    std::cout << "\nPrinting RefCount Matrix:\n";
+    for(int i = 0; i < nn; i++)                    // RefCount for All Rows
+    {
+        for(int j = 0; j < nn; j++)                    // RefCount for All Columns
+        {
+            std::cout << index_arr(i, j).refcount;
+        }
+
+        std::cout << "\n";
     }
 
     return 0;
