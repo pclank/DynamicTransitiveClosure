@@ -19,6 +19,8 @@ struct indexobj                                 // Object Saved in Index Array
     unsigned int refcount;
 };
 
+// Helper Functions Section
+
 // Target Vertex to Adjacent of Source & Index.edgeTarget Point to Target Vertex
 void makeEdge(const graph& G, node s, node t, array<list<node>>& adjacent, array2<indexobj>& index_arr)
 {
@@ -46,6 +48,8 @@ void removeClosure(const graph& G, node s, node t, array<list<node>>& reaches, a
     reaches[t->id()].remove(s);                     // Delete Source from Reaches List of Target
     index_arr(s->id(), t->id()).closure_source = NULL;  // closureSource to Null
 }
+
+// Usable Functions Section
 
 // Function to Insert Edge
 void insertEdge(const graph& G, node s, node t, array<list<node>>& reaches, array<list<node>>& adjacent, array2<indexobj>& index_arr)
@@ -185,7 +189,9 @@ int main()
     std::cout << "How many Edges to Add? (DEFAULT = 1) ";
     std::cin >> num_of_edges;
 
-    for (int i = 0; i < num_of_edges; i++)          // Add Select Number of Edges
+    // Add Select Number of Edges
+
+    for (int i = 0; i < num_of_edges; i++)
     {
         G.new_edge(n1 = G.choose_node(), n2 = G.choose_node());     // Random Source and Target Vertices
 
@@ -225,6 +231,17 @@ int main()
         }
 
         std::cout << "\n";
+    }
+
+    // Remove Random Edges
+
+    for (int i = 0; i < num_of_edges - 2; i++)      // TODO Add User-Based Upper Bound
+    {
+        e = G.choose_edge();                            // Randomly Choose an Edge
+        std::cout << "\nRemoving Edge: " << G.print_edge(e) << "\n";
+
+        G.del_edge(e);                                  // Delete Edge from G
+        deleteEdge(G, G.source(e), G.target(e), reaches, adjacent, index_arr);  // Update DTC
     }
 
     return 0;
