@@ -120,9 +120,9 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
 
     for (int i = 0; i < reaches[s->id()].length(); i++)
     {
+        x = reaches[s->id()].inf(reaches[s->id()].get_item(i));
         index_arr(x->id(), t->id()).refcount--;
 
-        x = reaches[s->id()].inf(reaches[s->id()].get_item(i));
         if (index_arr(x->id(), t->id()).refcount == 0)
         {
             removeClosure(G, x, t, reaches, index_arr);
