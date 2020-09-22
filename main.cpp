@@ -16,7 +16,7 @@ struct indexobj                                 // Object Saved in Index Array
     node edge_target;
     node closure_source;
 
-    unsigned int refcount;
+    int refcount;
 };
 
 // Helper Functions Section
@@ -170,7 +170,7 @@ int main()
     std::cout << "\n\nInput Initial Graph Vertex Number: ";
     std::cin >> nn;
 
-    random_graph(G, nn, 1);
+    random_graph(G, nn, 0);
 
     std::cout << "\nBuilt Initial Graph G with " << nn << " Vertices!\n\n";
 
@@ -191,8 +191,8 @@ int main()
         }
     }
 
-    int num_of_edges =1;
-    std::cout << "How many Edges to Add? (DEFAULT = 1) ";
+    int num_of_edges = 1;
+    std::cout << "Input Edges to Add (DEFAULT = 1): ";
     std::cin >> num_of_edges;
 
     // Add Select Number of Edges
@@ -203,10 +203,7 @@ int main()
 
 
         insertEdge(G, n1, n2, reaches, adjacent, index_arr);
-        std::cout << "\n\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
-
-        node tn = index_arr(n1->id(), n2->id()).edge_target;
-        std::cout << tn->id() << "\n";
+        std::cout << "\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
     }
 
     // Print all Edges
