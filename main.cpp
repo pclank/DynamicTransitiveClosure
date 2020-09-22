@@ -242,8 +242,8 @@ int main()
         G.print_edge(e);
         std::cout << "\n";
 
-        G.del_edge(e);                                  // Delete Edge from G
         deleteEdge(G, G.source(e), G.target(e), reaches, adjacent, index_arr);  // Update DTC
+        G.del_edge(e);                                  // Delete Edge from G
     }
 
     return 0;
