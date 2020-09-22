@@ -27,7 +27,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Minor Improvements.">
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Added Edge Deletion Section in Driver Code.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -78,7 +78,7 @@
       <workItem from="1597684278840" duration="513000" />
       <workItem from="1600695911863" duration="189000" />
       <workItem from="1600696811426" duration="7266000" />
-      <workItem from="1600783296297" duration="1316000" />
+      <workItem from="1600783296297" duration="1553000" />
     </task>
     <task id="LOCAL-00001" summary="Mistake Fixed.">
       <created>1597332721889</created>
@@ -178,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600705330109</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added Edge Deletion Section in Driver Code.">
+      <created>1600784651765</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1600784651765</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +219,8 @@
     <MESSAGE value="Minor Improvement in Matrix Printing." />
     <MESSAGE value="Index Based Matrix Printing." />
     <MESSAGE value="Minor Improvements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor Improvements." />
+    <MESSAGE value="Added Edge Deletion Section in Driver Code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Edge Deletion Section in Driver Code." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
@@ -235,10 +243,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="807" y="433" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600702626009" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600705334265">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600784657152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600705334265" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600784657152" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597684312580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -238,7 +238,9 @@ int main()
     for (int i = 0; i < num_of_edges - 2; i++)      // TODO Add User-Based Upper Bound
     {
         e = G.choose_edge();                            // Randomly Choose an Edge
-        std::cout << "\nRemoving Edge: " << G.print_edge(e) << "\n";
+        std::cout << "\nRemoving Edge: ";
+        G.print_edge(e);
+        std::cout << "\n";
 
         G.del_edge(e);                                  // Delete Edge from G
         deleteEdge(G, G.source(e), G.target(e), reaches, adjacent, index_arr);  // Update DTC
