@@ -278,10 +278,12 @@ int main()
 
             for (int i = 0; i < reaches[n1->id()].length(); i++)    // Print All Vertices in Reaches List of n1
             {
-                std::cout << reaches[n1->id()].inf(reaches[n1->id()].get_item(i))->id();
+                std::cout << reaches[n1->id()].inf(reaches[n1->id()].get_item(i))->id() << "  ";
             }
         }
     }
+
+    std::cout << "\n\n";
 
     return 0;
 }
