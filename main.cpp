@@ -143,16 +143,14 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
 
         for (int i = 0; i < adjacent[y->id()].length(); i++)
         {
+            z = adjacent[y->id()].inf(adjacent[y->id()].get_item(i));
             index_arr(x->id(), z->id()).refcount--;
 
-            z = adjacent[y->id()].inf(adjacent[y->id()].get_item(i));
             if (index_arr(x->id(), z->id()).refcount == 0)
             {
                 removeClosure(G, x, z, reaches, index_arr);
                 worklist.push(std::make_pair(x, z));
             }
-
-            std::cout << "\n3 - RefCount = " << index_arr(s->id(), t->id()).refcount;
         }
     }
 }
