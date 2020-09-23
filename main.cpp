@@ -16,7 +16,7 @@ struct indexobj                                 // Object Saved in Index Array
     node edge_target;
     node closure_source;
 
-    int refcount;
+    unsigned int refcount;
 };
 
 // Helper Functions Section
@@ -123,7 +123,11 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
     for (int i = 0; i < reaches[s->id()].length(); i++)
     {
         x = reaches[s->id()].inf(reaches[s->id()].get_item(i));
-        index_arr(x->id(), t->id()).refcount--;
+
+        if (index_arr(x->id(), t->id()).refcount != 0)
+        {
+            index_arr(x->id(), t->id()).refcount--;
+        }
 
         if (index_arr(x->id(), t->id()).refcount == 0)
         {
