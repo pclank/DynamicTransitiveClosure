@@ -265,5 +265,23 @@ int main()
         }
     }
 
+    // Reachability Testing Section
+
+    std::cout << "\nPrint Reachability (Transitive Closure) of Vertices? (y/n) ";
+    std::cin >> choice;
+
+    if (choice == 'y')
+    {
+        forall_nodes(n1, G)
+        {
+            std::cout << "\nVertex " << n1->id() << " Reaches: ";
+
+            for (int i = 0; i < reaches[n1->id()].length(); i++)    // Print All Vertices in Reaches List of n1
+            {
+                std::cout << reaches[n1->id()].inf(reaches[n1->id()].get_item(i))->id();
+            }
+        }
+    }
+
     return 0;
 }
