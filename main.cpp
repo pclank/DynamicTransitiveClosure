@@ -230,30 +230,39 @@ int main()
         std::cout << "\n";
     }
 
-    // Remove Random Edges
+    // Deletion Decision Section
 
-    for (int i = 0; i < num_of_edges - 2; i++)      // TODO Add User-Based Upper Bound
+    char choice;
+    std::cout << "\nDelete Random Edges? (y/n) ";
+    std::cin >> choice;
+
+    if (choice == 'y')
     {
-        e = G.choose_edge();                            // Randomly Choose an Edge
-        std::cout << "\nRemoving Edge: ";
-        G.print_edge(e);
-        std::cout << "\n";
+        // Remove Random Edges
 
-        deleteEdge(G, G.source(e), G.target(e), reaches, adjacent, index_arr);  // Update DTC
-        G.del_edge(e);                                  // Delete Edge from G
-    }
-
-    // Printing RefCount Matrix for Testing after Deletion
-
-    std::cout << "\nPrinting RefCount Matrix:\n";
-    for(int i = 0; i < nn; i++)                    // RefCount for All Rows
-    {
-        for(int j = 0; j < nn; j++)                    // RefCount for All Columns
+        for (int i = 0; i < num_of_edges - 2; i++)      // TODO Add User-Based Upper Bound
         {
-            std::cout << index_arr(i, j).refcount;
+            e = G.choose_edge();                            // Randomly Choose an Edge
+            std::cout << "\nRemoving Edge: ";
+            G.print_edge(e);
+            std::cout << "\n";
+
+            deleteEdge(G, G.source(e), G.target(e), reaches, adjacent, index_arr);  // Update DTC
+            G.del_edge(e);                                  // Delete Edge from G
         }
 
-        std::cout << "\n";
+        // Printing RefCount Matrix for Testing after Deletion
+
+        std::cout << "\nPrinting RefCount Matrix:\n";
+        for(int i = 0; i < nn; i++)                    // RefCount for All Rows
+        {
+            for(int j = 0; j < nn; j++)                    // RefCount for All Columns
+            {
+                std::cout << index_arr(i, j).refcount;
+            }
+
+            std::cout << "\n";
+        }
     }
 
     return 0;
