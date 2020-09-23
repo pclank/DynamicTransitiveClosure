@@ -159,7 +159,7 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
 
 int main()
 {
-    system("clear");                      // Clean Console
+    system("clear");                      // Clear Console
 
     // Initial Graph Building Section
 
@@ -197,7 +197,7 @@ int main()
 
     // Add Select Number of Edges
 
-    for (int i = 0; i < num_of_edges; i++)
+    for (int i = 0; i < num_of_edges; i++)              // TODO Exclude Already Added Edges
     {
         G.new_edge(n1 = G.choose_node(), n2 = G.choose_node());     // Random Source and Target Vertices
 
@@ -274,7 +274,7 @@ int main()
     {
         forall_nodes(n1, G)
         {
-            std::cout << "\nVertex " << n1->id() << " Reaches: ";
+            std::cout << "\nVertex " << n1->id() << " is Reachable by: ";
 
             for (int i = 0; i < reaches[n1->id()].length(); i++)    // Print All Vertices in Reaches List of n1
             {
