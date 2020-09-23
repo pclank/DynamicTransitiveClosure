@@ -112,8 +112,6 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
     removeEdge(G, s, t, adjacent, index_arr);
     index_arr(s->id(), t->id()).refcount--;
 
-    std::cout << "\n1 - RefCount = " << index_arr(s->id(), t->id()).refcount;
-
     if (index_arr(s->id(), t->id()).refcount == 0)
     {
         removeClosure(G, s, t, reaches, index_arr);
@@ -134,8 +132,6 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
             removeClosure(G, x, t, reaches, index_arr);
             worklist.push(std::make_pair(x, t));
         }
-
-        std::cout << "\n2 -RefCount = " << index_arr(s->id(), t->id()).refcount;
     }
 
     std::pair<node, node> tmp;
