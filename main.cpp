@@ -230,9 +230,25 @@ int main()
         std::cout << "\n";
     }
 
+    char choice;
+    std::cout << "\nPrint Reachability (Transitive Closure) of Vertices? (y/n) ";
+    std::cin >> choice;
+
+    if (choice == 'y')
+    {
+        forall_nodes(n1, G)
+        {
+            std::cout << "\nVertex " << n1->id() << " is Reachable by: ";
+
+            for (int i = 0; i < reaches[n1->id()].length(); i++)    // Print All Vertices in Reaches List of n1
+            {
+                std::cout << reaches[n1->id()].inf(reaches[n1->id()].get_item(i))->id() << "  ";
+            }
+        }
+    }
+
     // Deletion Decision Section
 
-    char choice;
     std::cout << "\nDelete Random Edges? (y/n) ";
     std::cin >> choice;
 
@@ -265,7 +281,7 @@ int main()
         }
     }
 
-    // Reachability Testing Section
+    // Reachability Testing After Possible Deletion Section
 
     std::cout << "\nPrint Reachability (Transitive Closure) of Vertices? (y/n) ";
     std::cin >> choice;
