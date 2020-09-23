@@ -112,7 +112,7 @@ void deleteEdge(const graph& G, node s, node t, array<list<node>>& reaches, arra
     removeEdge(G, s, t, adjacent, index_arr);
     index_arr(s->id(), t->id()).refcount--;
 
-    if (index_arr(s->id(), t->id()).refcount == 0)
+    if (index_arr(s->id(), t->id()).refcount == 0 || (s->id() == t->id()))      // Personal Fix-Improvement for Graphs Containing Self-Loops
     {
         removeClosure(G, s, t, reaches, index_arr);
         worklist.push(std::make_pair(s, t));
