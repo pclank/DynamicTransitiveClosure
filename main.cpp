@@ -210,7 +210,7 @@ int main()
         std::cout << "\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
     }
 
-    dlc.stop();                                         // Stop Timer
+    dtc.stop();                                         // Stop Timer
 
     // Print all Edges
 
