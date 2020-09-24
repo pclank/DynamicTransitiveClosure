@@ -161,7 +161,7 @@ int main()
 
     // Timer Initialization
 
-    timer dtc;
+    timer dtc_timer;
 
     // Initial Graph Building Section
 
@@ -199,7 +199,7 @@ int main()
 
     // Add Select Number of Edges
 
-    dtc.start();                                        // Start Timer
+    dtc_timer.start();                                        // Start Timer
 
     for (int i = 0; i < num_of_edges; i++)              // TODO Exclude Already Added Edges
     {
@@ -210,7 +210,7 @@ int main()
         std::cout << "\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
     }
 
-    dtc.stop();                                         // Stop Timer
+    dtc_timer.stop();                                         // Stop Timer
 
     // Print all Edges
 
@@ -223,13 +223,13 @@ int main()
         std::cout << "\n";
     }
 
-    char choice;
+    char ref_choice;
     std::cout << "\nPrint RefCount Matrix? (y/n) ";
-    std::cin >> choice;
+    std::cin >> ref_choice;
 
     // Printing RefCount Matrix for Testing after Insertion
 
-    if (choice == 'y')
+    if (ref_choice == 'y')
     {
         std::cout << "\nPrinting RefCount Matrix:\n";
         for (int i = 0; i < nn; i++)                    // RefCount for All Rows
@@ -243,8 +243,9 @@ int main()
         }
     }
 
-    std::cout << "\nTime Elapsed (" << nn << " Vertices and " << num_of_edges << " Edges): " << dtc.elapsed_time() << " Seconds.\n\n";
+    std::cout << "\nTime Elapsed (" << nn << " Vertices and " << num_of_edges << " Edges): " << dtc_timer.elapsed_time() << " Seconds.\n\n";    // Print Elapsed Time for Creation
 
+    char choice;
     std::cout << "\nPrint Reachability (Transitive Closure) of Vertices? (y/n) ";
     std::cin >> choice;
 
@@ -268,6 +269,8 @@ int main()
 
     if (choice == 'y')
     {
+        dtc_timer.restart();                            // Reset Timer to Zero and Start Counting
+
         // Remove Random Edges
 
         for (int i = 0; i < num_of_edges / 2; i++)      // Half the Edges Are Removed
@@ -281,18 +284,25 @@ int main()
             G.del_edge(e);                                  // Delete Edge from G
         }
 
+        dtc_timer.stop();                               // Stop Timer
+
         // Printing RefCount Matrix for Testing after Deletion
 
-        std::cout << "\nPrinting RefCount Matrix:\n";
-        for(int i = 0; i < nn; i++)                    // RefCount for All Rows
+        if (ref_choice == 'y')
         {
-            for(int j = 0; j < nn; j++)                    // RefCount for All Columns
+            std::cout << "\nPrinting RefCount Matrix:\n";
+            for (int i = 0; i < nn; i++)                    // RefCount for All Rows
             {
-                std::cout << index_arr(i, j).refcount;
-            }
+                for (int j = 0; j < nn; j++)                    // RefCount for All Columns
+                {
+                    std::cout << index_arr(i, j).refcount;
+                }
 
-            std::cout << "\n";
+                std::cout << "\n";
+            }
         }
+
+        std::cout << "\nTime Elapsed for Deletion (" << num_of_edges / 2 << " Edges): " << dtc_timer.elapsed_time() << " Seconds.\n\n"; // Print Elapsed Time for Deletion
     }
 
     // Reachability Testing After Possible Deletion Section
