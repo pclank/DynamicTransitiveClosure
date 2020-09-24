@@ -223,22 +223,28 @@ int main()
         std::cout << "\n";
     }
 
+    char choice;
+    std::cout << "\nPrint RefCount Matrix? (y/n) ";
+    std::cin >> choice;
+
     // Printing RefCount Matrix for Testing after Insertion
 
-    std::cout << "\nPrinting RefCount Matrix:\n";
-    for(int i = 0; i < nn; i++)                    // RefCount for All Rows
+    if (choice == 'y')
     {
-        for(int j = 0; j < nn; j++)                    // RefCount for All Columns
+        std::cout << "\nPrinting RefCount Matrix:\n";
+        for (int i = 0; i < nn; i++)                    // RefCount for All Rows
         {
-            std::cout << index_arr(i, j).refcount;
-        }
+            for (int j = 0; j < nn; j++)                    // RefCount for All Columns
+            {
+                std::cout << index_arr(i, j).refcount;
+            }
 
-        std::cout << "\n";
+            std::cout << "\n";
+        }
     }
 
     std::cout << "\nTime Elapsed (" << nn << " Vertices and " << num_of_edges << " Edges): " << dtc.elapsed_time() << " Seconds.\n\n";
 
-    char choice;
     std::cout << "\nPrint Reachability (Transitive Closure) of Vertices? (y/n) ";
     std::cin >> choice;
 
