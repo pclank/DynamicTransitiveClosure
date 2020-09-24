@@ -217,13 +217,14 @@ int main()
     std::cout << "Done!\n\n" << "\nPrint All Edges? (y/n) ";
     std::cin >> choice;
 
+    edge e;
     if (choice == 'y')
     {
         // Print all Edges
 
         std::cout << "\nPrinting All Edges: \n";
 
-        edge e;
+
         forall_edges(e, G)
         {
             G.print_edge(e);
