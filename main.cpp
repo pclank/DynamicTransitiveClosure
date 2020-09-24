@@ -270,7 +270,7 @@ int main()
     {
         // Remove Random Edges
 
-        for (int i = 0; i < num_of_edges - 2; i++)      // TODO Add User-Based Upper Bound
+        for (int i = 0; i < num_of_edges / 2; i++)      // Half the Edges Are Removed
         {
             e = G.choose_edge();                            // Randomly Choose an Edge
             std::cout << "\nRemoving Edge: ";
