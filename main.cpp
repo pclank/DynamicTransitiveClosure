@@ -199,6 +199,8 @@ int main()
 
     // Add Select Number of Edges
 
+    std::cout << "\nInserting " << num_of_edges <<  " Edges...\n";
+
     dtc_timer.start();                                        // Start Timer
 
     for (int i = 0; i < num_of_edges; i++)              // TODO Exclude Already Added Edges
@@ -207,20 +209,26 @@ int main()
 
 
         insertEdge(G, n1, n2, reaches, adjacent, index_arr);
-        std::cout << "\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
     }
 
     dtc_timer.stop();                                         // Stop Timer
 
-    // Print all Edges
+    char choice;
+    std::cout << "Done!\n\n" << "\nPrint All Edges? (y/n) ";
+    std::cin >> choice;
 
-    std::cout << "\nPrinting All Edges: \n";
-
-    edge e;
-    forall_edges(e, G)
+    if (choice == 'y')
     {
-        G.print_edge(e);
-        std::cout << "\n";
+        // Print all Edges
+
+        std::cout << "\nPrinting All Edges: \n";
+
+        edge e;
+        forall_edges(e, G)
+        {
+            G.print_edge(e);
+            std::cout << "\n";
+        }
     }
 
     char ref_choice;
@@ -245,7 +253,6 @@ int main()
 
     std::cout << "\nTime Elapsed (" << nn << " Vertices and " << num_of_edges << " Edges): " << dtc_timer.elapsed_time() << " Seconds.\n\n";    // Print Elapsed Time for Creation
 
-    char choice;
     std::cout << "\nPrint Reachability (Transitive Closure) of Vertices? (y/n) ";
     std::cin >> choice;
 
