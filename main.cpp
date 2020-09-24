@@ -274,8 +274,14 @@ int main()
     std::cout << "\nDelete Random Edges? (y/n) ";
     std::cin >> choice;
 
+    char del_print_choice;
+    std::cout << "\nPrint Edges Being Deleted? (y/n) ";
+    std::cin >> del_print_choice;
+
     if (choice == 'y')
     {
+        std::cout << "\nDeleting Edges...\n";
+
         dtc_timer.restart();                            // Reset Timer to Zero and Start Counting
 
         // Remove Random Edges
@@ -283,9 +289,13 @@ int main()
         for (int i = 0; i < num_of_edges / 2; i++)      // Half the Edges Are Removed
         {
             e = G.choose_edge();                            // Randomly Choose an Edge
-            std::cout << "\nRemoving Edge: ";
-            G.print_edge(e);
-            std::cout << "\n";
+
+            if (del_print_choice == 'y')                    // Conditionally Print Edge Being Deleted
+            {
+                std::cout << "\nRemoving Edge: ";
+                G.print_edge(e);
+                std::cout << "\n";
+            }
 
             deleteEdge(G, G.source(e), G.target(e), reaches, adjacent, index_arr);  // Update DTC
             G.del_edge(e);                                  // Delete Edge from G
@@ -309,7 +319,7 @@ int main()
             }
         }
 
-        std::cout << "\nTime Elapsed for Deletion (" << num_of_edges / 2 << " Edges): " << dtc_timer.elapsed_time() << " Seconds.\n\n"; // Print Elapsed Time for Deletion
+        std::cout << "\nDone!\n\nTime Elapsed for Deletion (" << num_of_edges / 2 << " Edges): " << dtc_timer.elapsed_time() << " Seconds.\n\n"; // Print Elapsed Time for Deletion
     }
 
     // Reachability Testing After Possible Deletion Section
