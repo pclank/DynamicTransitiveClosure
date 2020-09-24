@@ -159,6 +159,10 @@ int main()
 {
     system("clear");                      // Clear Console
 
+    // Timer Initialization
+
+    timer dtc;
+
     // Initial Graph Building Section
 
     graph G;
@@ -195,6 +199,8 @@ int main()
 
     // Add Select Number of Edges
 
+    dtc.start();                                        // Start Timer
+
     for (int i = 0; i < num_of_edges; i++)              // TODO Exclude Already Added Edges
     {
         G.new_edge(n1 = G.choose_node(), n2 = G.choose_node());     // Random Source and Target Vertices
@@ -203,6 +209,8 @@ int main()
         insertEdge(G, n1, n2, reaches, adjacent, index_arr);
         std::cout << "\nEdge " << n1->id() << " - " << n2->id() << " added!\n";
     }
+
+    dlc.stop();                                         // Stop Timer
 
     // Print all Edges
 
@@ -227,6 +235,8 @@ int main()
 
         std::cout << "\n";
     }
+
+    std::cout << "\nTime Elapsed (" << nn << " Vertices and " << num_of_edges << " Edges): " << dtc.elapsed_time() << " Seconds.\n\n";
 
     char choice;
     std::cout << "\nPrint Reachability (Transitive Closure) of Vertices? (y/n) ";
