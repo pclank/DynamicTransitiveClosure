@@ -27,7 +27,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Added Choice for Printing Edges Being Deleted, and Progress Messages for Delete Operation.">
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Declared Object &quot;edge e&quot; Correctly.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <list id="32d32187-d3e3-43da-b240-8cb4d3d73a88" name="Finalized InsertEdge Algorithm Implementation." comment="" />
@@ -86,7 +87,7 @@
       <workItem from="1600696811426" duration="7266000" />
       <workItem from="1600783296297" duration="6684000" />
       <workItem from="1600869206344" duration="7941000" />
-      <workItem from="1600961085224" duration="4583000" />
+      <workItem from="1600961085224" duration="5366000" />
     </task>
     <task id="LOCAL-00001" summary="Mistake Fixed.">
       <created>1597332721889</created>
@@ -340,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600965728413</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Declared Object &quot;edge e&quot; Correctly.">
+      <created>1600965809920</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1600965809920</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +368,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Minor Improvement in Matrix Printing." />
     <MESSAGE value="Index Based Matrix Printing." />
     <MESSAGE value="Minor Improvements." />
     <MESSAGE value="Added Edge Deletion Section in Driver Code." />
@@ -385,7 +392,8 @@
     <MESSAGE value="Added Default num_of_edges Presentation." />
     <MESSAGE value="Added Choice for Printing Edges, Removed Debug Edge Printing, and Added Progress Messages." />
     <MESSAGE value="Added Choice for Printing Edges Being Deleted, and Progress Messages for Delete Operation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Choice for Printing Edges Being Deleted, and Progress Messages for Delete Operation." />
+    <MESSAGE value="Declared Object &quot;edge e&quot; Correctly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Declared Object &quot;edge e&quot; Correctly." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
@@ -408,10 +416,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="807" y="433" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600702626009" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600965732120">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600965813207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600965732119" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600965813207" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597684312580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -207,7 +207,6 @@ int main()
     {
         G.new_edge(n1 = G.choose_node(), n2 = G.choose_node());     // Random Source and Target Vertices
 
-
         insertEdge(G, n1, n2, reaches, adjacent, index_arr);
     }
 
