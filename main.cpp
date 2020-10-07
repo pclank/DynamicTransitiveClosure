@@ -270,7 +270,7 @@ int main()
         }
     }
 
-    std::cout << "\n\n";
+    std::cout << "\n";
 
     // Static Algorithm Test Comparison Using DFS Prior to Deletion
 

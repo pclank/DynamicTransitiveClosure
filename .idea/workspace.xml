@@ -27,7 +27,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Small Changes and Improvements to Presentation, plus a Choice for Printing DFS Generated Results.">
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Added Pre-Deletion DFS, and Post-Deletion DFS.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -93,7 +93,7 @@
       <workItem from="1601991843901" duration="3888000" />
       <workItem from="1602031194464" duration="614000" />
       <workItem from="1602080671071" duration="4621000" />
-      <workItem from="1602087082194" duration="140000" />
+      <workItem from="1602087082194" duration="1046000" />
     </task>
     <task id="LOCAL-00001" summary="Mistake Fixed.">
       <created>1597332721889</created>
@@ -389,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602084132189</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Added Pre-Deletion DFS, and Post-Deletion DFS.">
+      <created>1602087282485</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1602087282485</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +416,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Major Issue Fixed. No longer have out of bounds error." />
     <MESSAGE value="Now Allows Same-Vertex Edges." />
     <MESSAGE value="Some Improvements.&#10;Bug: Some RefCount Values become Negative." />
     <MESSAGE value="Added Choice for Deletion of Random Edges (and Subsequent Printing)." />
@@ -434,7 +440,8 @@
     <MESSAGE value="Added DFS Timer Function." />
     <MESSAGE value="Added DFS Timer Operation." />
     <MESSAGE value="Small Changes and Improvements to Presentation, plus a Choice for Printing DFS Generated Results." />
-    <option name="LAST_COMMIT_MESSAGE" value="Small Changes and Improvements to Presentation, plus a Choice for Printing DFS Generated Results." />
+    <MESSAGE value="Added Pre-Deletion DFS, and Post-Deletion DFS." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Pre-Deletion DFS, and Post-Deletion DFS." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
@@ -457,10 +464,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="807" y="433" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600702626009" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602084136711">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602087286509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602084136711" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602087286509" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597684312580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
