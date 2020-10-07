@@ -367,7 +367,7 @@ int main()
         }
     }
 
-    std::cout << "\nDone!\n\nTime Elapsed for DFS: " << dfs_timer.elapsed_time() << " Seconds.\n\n";
+    std::cout << "\nDone!\n\nTime Elapsed for DFS: " << dfs_timer.elapsed_time() << " Seconds.\n\n";    // Print Elapsed Time for DFS
 
     return 0;
 }

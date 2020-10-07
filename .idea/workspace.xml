@@ -27,8 +27,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Added DFS Static Algorithm Test.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Added DFS Timer Function.">
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <list id="32d32187-d3e3-43da-b240-8cb4d3d73a88" name="Finalized InsertEdge Algorithm Implementation." comment="" />
@@ -92,7 +91,7 @@
       <workItem from="1601907847579" duration="1498000" />
       <workItem from="1601991843901" duration="3888000" />
       <workItem from="1602031194464" duration="614000" />
-      <workItem from="1602080671071" duration="2522000" />
+      <workItem from="1602080671071" duration="2595000" />
     </task>
     <task id="LOCAL-00001" summary="Mistake Fixed.">
       <created>1597332721889</created>
@@ -367,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602082765767</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Added DFS Timer Function.">
+      <created>1602083247913</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1602083247913</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +393,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added Edge Deletion Section in Driver Code." />
     <MESSAGE value="Small Fix in Printing of Edge to be Deleted." />
     <MESSAGE value="Minor Fix in Operation Sequence." />
     <MESSAGE value="Major Issue Fixed. No longer have out of bounds error." />
@@ -412,7 +417,8 @@
     <MESSAGE value="Declared Object &quot;edge e&quot; Correctly." />
     <MESSAGE value="Some NewLine Cleaning." />
     <MESSAGE value="Added DFS Static Algorithm Test." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DFS Static Algorithm Test." />
+    <MESSAGE value="Added DFS Timer Function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DFS Timer Function." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
