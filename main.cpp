@@ -270,6 +270,39 @@ int main()
         }
     }
 
+    std::cout << "\n\n";
+
+    // Static Algorithm Test Comparison Using DFS Prior to Deletion
+
+    std::cout << "\nPrint Reachability (Transitive Closure) of Vertices after DFS? (y/n) ";
+    std::cin >> choice;
+
+    std::cout << "\nTesting using DFS...\n";
+
+    forall_nodes(n1, G)
+    {
+        node_array<bool> st(G,false);
+
+        dfs_timer.start();                                  // Start Timer
+
+        DFS(G, n1, st);                                     // Run DFS
+
+        dfs_timer.stop();                                   // Pause Timer
+
+        if (choice == 'y')                                  // Printing Vertices n1 can Reach
+        {
+            std::cout << "\nVertex " << n1->id() << " Reaches: ";
+            forall_nodes(n2, G)
+            {
+                if (st[n2]) {
+                    std::cout << n2->id() << "  ";
+                }
+            }
+        }
+    }
+
+    std::cout << "\n\nDone!\n\nTime Elapsed for DFS Prior to Deletion: " << dfs_timer.elapsed_time() << " Seconds.\n\n";    // Print Elapsed Time for DFS
+
     // Deletion Decision Section
 
     std::cout << "\n\nDelete Random Edges? (y/n) ";
@@ -343,7 +376,7 @@ int main()
 
     std::cout << "\n\n";
 
-    // Static Algorithm Test Comparison Using DFS
+    // Static Algorithm Test Comparison Using DFS Post Deletion
 
     std::cout << "\nPrint Reachability (Transitive Closure) of Vertices after DFS? (y/n) ";
     std::cin >> choice;
@@ -372,7 +405,7 @@ int main()
         }
     }
 
-    std::cout << "\n\nDone!\n\nTime Elapsed for DFS: " << dfs_timer.elapsed_time() << " Seconds.\n\n";    // Print Elapsed Time for DFS
+    std::cout << "\n\nDone!\n\nTime Elapsed for DFS Post Deletion: " << dfs_timer.elapsed_time() << " Seconds.\n\n";    // Print Elapsed Time for DFS
 
     return 0;
 }
