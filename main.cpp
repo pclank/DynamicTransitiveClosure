@@ -271,7 +271,7 @@ int main()
 
     // Deletion Decision Section
 
-    std::cout << "\nDelete Random Edges? (y/n) ";
+    std::cout << "\n\nDelete Random Edges? (y/n) ";
     std::cin >> choice;
 
     char del_print_choice;
@@ -341,6 +341,27 @@ int main()
     }
 
     std::cout << "\n\n";
+
+    // Static Algorithm Test Comparison Using DFS
+
+    int counter = 0;
+    forall_nodes(n1, G)
+    {
+        node_array<bool> st(G,false);
+
+        DFS(G, n1, st);
+
+        std::cout << "Vertex " << n1->id() << " Reaches: ";
+        forall_nodes(n2, G)
+        {
+            if (st[n2])
+            {
+                std::cout << n2->id() << "  ";
+            }
+        }
+
+        std::cout << "\n\n";
+    }
 
     return 0;
 }
