@@ -345,6 +345,9 @@ int main()
 
     // Static Algorithm Test Comparison Using DFS
 
+    std::cout << "\nPrint Reachability (Transitive Closure) of Vertices after DFS? (y/n) ";
+    std::cin >> choice;
+
     std::cout << "\nTesting using DFS...\n";
 
     forall_nodes(n1, G)
@@ -353,21 +356,23 @@ int main()
 
         dfs_timer.start();                                  // Start Timer
 
-        DFS(G, n1, st);
+        DFS(G, n1, st);                                     // Run DFS
 
         dfs_timer.stop();                                   // Pause Timer
 
-        std::cout << "\nVertex " << n1->id() << " Reaches: ";
-        forall_nodes(n2, G)
+        if (choice == 'y')                                  // Printing Vertices n1 can Reach
         {
-            if (st[n2])
+            std::cout << "\nVertex " << n1->id() << " Reaches: ";
+            forall_nodes(n2, G)
             {
-                std::cout << n2->id() << "  ";
+                if (st[n2]) {
+                    std::cout << n2->id() << "  ";
+                }
             }
         }
     }
 
-    std::cout << "\nDone!\n\nTime Elapsed for DFS: " << dfs_timer.elapsed_time() << " Seconds.\n\n";    // Print Elapsed Time for DFS
+    std::cout << "\n\nDone!\n\nTime Elapsed for DFS: " << dfs_timer.elapsed_time() << " Seconds.\n\n";    // Print Elapsed Time for DFS
 
     return 0;
 }

@@ -27,7 +27,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Added DFS Timer Function.">
+    <list default="true" id="567480e6-5fdd-46d4-aa68-8c38cc533c23" name="Default Changelist" comment="Added DFS Timer Operation.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <list id="32d32187-d3e3-43da-b240-8cb4d3d73a88" name="Finalized InsertEdge Algorithm Implementation." comment="" />
@@ -91,7 +92,7 @@
       <workItem from="1601907847579" duration="1498000" />
       <workItem from="1601991843901" duration="3888000" />
       <workItem from="1602031194464" duration="614000" />
-      <workItem from="1602080671071" duration="2595000" />
+      <workItem from="1602080671071" duration="3420000" />
     </task>
     <task id="LOCAL-00001" summary="Mistake Fixed.">
       <created>1597332721889</created>
@@ -373,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602083247913</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Added DFS Timer Operation.">
+      <created>1602083284200</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1602083284200</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +401,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Small Fix in Printing of Edge to be Deleted." />
     <MESSAGE value="Minor Fix in Operation Sequence." />
     <MESSAGE value="Major Issue Fixed. No longer have out of bounds error." />
     <MESSAGE value="Now Allows Same-Vertex Edges." />
@@ -418,7 +425,8 @@
     <MESSAGE value="Some NewLine Cleaning." />
     <MESSAGE value="Added DFS Static Algorithm Test." />
     <MESSAGE value="Added DFS Timer Function." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DFS Timer Function." />
+    <MESSAGE value="Added DFS Timer Operation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DFS Timer Operation." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597329170852">
@@ -441,10 +449,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="807" y="433" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600702626009" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602082769662">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602083288964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602082769662" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602083288964" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597684312580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
