@@ -162,6 +162,7 @@ int main()
     // Timer Initialization
 
     timer dtc_timer;
+    timer dfs_timer;
 
     // Initial Graph Building Section
 
@@ -344,14 +345,19 @@ int main()
 
     // Static Algorithm Test Comparison Using DFS
 
-    int counter = 0;
+    std::cout << "\nTesting using DFS...\n";
+
     forall_nodes(n1, G)
     {
         node_array<bool> st(G,false);
 
+        dfs_timer.start();                                  // Start Timer
+
         DFS(G, n1, st);
 
-        std::cout << "Vertex " << n1->id() << " Reaches: ";
+        dfs_timer.stop();                                   // Pause Timer
+
+        std::cout << "\nVertex " << n1->id() << " Reaches: ";
         forall_nodes(n2, G)
         {
             if (st[n2])
@@ -359,9 +365,9 @@ int main()
                 std::cout << n2->id() << "  ";
             }
         }
-
-        std::cout << "\n\n";
     }
+
+    std::cout << "\nDone!\n\nTime Elapsed for DFS: " << dfs_timer.elapsed_time() << " Seconds.\n\n";
 
     return 0;
 }
