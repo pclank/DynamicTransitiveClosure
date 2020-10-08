@@ -195,7 +195,7 @@ int main()
     }
 
     int num_of_edges = nn * (nn - 1);               // Possible Number of Edges
-    std::cout << "Input Edges to Add (DEFAULT = " << num_of_edges << "): ";
+    std::cout << "Input Edges to Add (Max = " << num_of_edges << "): ";
     std::cin >> num_of_edges;
 
     // Add Select Number of Edges
